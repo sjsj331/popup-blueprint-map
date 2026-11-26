@@ -1,12 +1,5 @@
 @import "tailwindcss";
 
-/* 청사진 색 팔레트 (나중에 화면 전체에서 같이 써요) */
-@theme {
-  --color-blueprint-900: #0b2a5b;
-  --color-blueprint-700: #14427f;
-  --color-blueprint-line: #9fd3ff;
-}
-
 html,
 body,
 #root {
@@ -15,5 +8,15 @@ body,
 }
 
 body {
-  background: var(--color-blueprint-900);
+  background: #f2efe9;
+  font-family: system-ui, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+}
+
+/* 지도 오른쪽 위 나침반 버튼을 어르신이 누르기 쉽게 크게 */
+.maplibregl-ctrl-group button {
+  width: 48px;
+  height: 48px;
+}
+.maplibregl-ctrl-top-right {
+  top: 150px;
 }
