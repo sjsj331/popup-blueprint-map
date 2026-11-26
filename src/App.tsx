@@ -1,5 +1,10 @@
 import { useEffect, useRef } from 'react'
-import { Map as MapLibreMap, NavigationControl } from 'maplibre-gl'
+import { Map as MapLibreMap, NavigationControl, setWorkerUrl } from 'maplibre-gl'
+// MapLibre 6은 지도를 그리는 보조 파일(worker)을 따로 불러와요.
+// Vite가 이 파일을 배포 결과물에 같이 넣도록 주소를 직접 알려 줘요.
+import maplibreWorkerUrl from 'maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url'
+
+setWorkerUrl(maplibreWorkerUrl)
 
 // 0단계: 부산(서면)을 중심으로 지도가 뜨는지만 확인하는 빈 화면이에요.
 // 청사진 스타일, 3D 팝업 건물은 다음 단계에서 붙여요.
