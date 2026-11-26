@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+/* 청사진 색 팔레트 (나중에 화면 전체에서 같이 써요) */
+@theme {
+  --color-blueprint-900: #0b2a5b;
+  --color-blueprint-700: #14427f;
+  --color-blueprint-line: #9fd3ff;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: var(--color-blueprint-900);
+}
